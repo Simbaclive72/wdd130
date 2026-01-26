@@ -1,7 +1,7 @@
 /* CSS VARIABLES */
 :root {
     --primary-color: #1b4965;
-    --secondary-color: #62b6cb;
+    --secondary-color: #a1a5a7;
     --accent1-color: #0b2545;
     --accent2-color: #ffffff;
 
@@ -20,6 +20,7 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    background-color: var(--accent2-color);
 }
 
 /* PAGE WIDTH */
@@ -62,6 +63,7 @@ section,
 article {
     margin: 16px;
     padding: 8px;
+    background-color: var(--secondary-color);
 }
 
 /* HERO */
