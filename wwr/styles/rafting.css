@@ -1,120 +1,130 @@
-/* CSS VARIABLES */
-:root {
-    --primary-color: #1b4965;
-    --secondary-color: #a1a5a7;
-    --accent1-color: #0b2545;
-    --accent2-color: #ffffff;
-
-    --heading-font: Arial, Helvetica, sans-serif;
-    --body-font: Verdana, Geneva, sans-serif;
-}
-
-/* RESET */
-* {
+/* ---------- GENERAL ---------- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    max-width: 1200px;
+    margin-inline: auto;
 }
 
-/* BODY */
-body {
-    font-family: var(--body-font);
-    color: var(--accent1-color);
-    background-color: var(--accent2-color);
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-/* PAGE WIDTH */
-header,
-main,
-footer {
-    width: 840px;
-    margin: 0 auto;
-}
-
-/* HEADER */
+/* ---------- HEADER (GRID) ---------- */
 header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 150px 1fr;
     align-items: center;
-    justify-content: space-between;
+    background-color: #cdb4f6;
+    padding: 1rem;
 }
 
 header img {
     width: 120px;
 }
 
+/* ---------- NAV (FLEX) ---------- */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
 nav a {
-    margin: 0 10px;
     text-decoration: none;
-    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    background-color: white;
+    color: #333;
+    border-radius: 4px;
     font-weight: bold;
 }
 
-/* HEADINGS */
-h1,
-h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
-
-/* SPACING */
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-    background-color: var(--secondary-color);
-}
-
-/* HERO */
+/* ---------- HERO ---------- */
 .hero {
-    position: relative;
+    margin: 2rem 0;
 }
 
-.hero img {
-    display: block;
+.hero h1 {
+    text-align: center;
+}
+
+.hero article {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* ---------- HISTORY ---------- */
+.history {
+    padding: 1rem;
+}
+
+.history h2 {
+    text-align: center;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+.history-content img {
     width: 100%;
     height: auto;
 }
 
-/* HERO TITLE OVERLAY */
-.hero h1 {
-    position: absolute;
-    top: 20px;
+/* ---------- ADVENTURES (FIXED ALIGNMENT) ---------- */
+.adventures h2 {
+    text-align: center;
+}
+
+.adventure-gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.adventure-gallery figure {
+    width: 18%;
+    text-align: center;
+}
+
+.adventure-gallery img {
     width: 100%;
-    padding: 16px;
-    text-align: center;
-    background-color: rgba(11, 37, 69, 0.7);
-    color: white;
+    height: 120px;
+    /* forces same image height */
+    object-fit: cover;
+    /* crops cleanly */
+    border-radius: 6px;
 }
 
-/* HERO ARTICLE OVERLAY */
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background-color: rgba(255, 255, 255, 0.85);
-    width: 70%;
+.adventure-gallery figcaption {
+    margin-top: 0.5rem;
+    font-weight: 600;
 }
 
-/* HERO ARTICLE IMAGE */
-.hero article img {
-    float: right;
-    width: 125px;
-    margin-left: 10px;
-    border: 2px solid var(--primary-color);
-}
-
-/* FOOTER */
+/* ---------- FOOTER (FIXED ICONS) ---------- */
 footer {
-    text-align: center;
+    background-color: #cdb4f6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
 }
 
-.socialmedia a {
-    text-decoration: none;
+footer .social {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
-.socialmedia img {
+footer .social img {
     width: 32px;
-    margin: 0 5px;
+    height: 32px;
+    object-fit: contain;
 }
