@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Fundamentals Quiz</title>
+    <link rel="stylesheet" href="styles/quiz.css">
+</head>
+
+<body>
+
+    <main class="quiz-card">
+        <h1>Web Fundamentals Quiz</h1>
+        <p class="subtitle">Test your HTML & CSS knowledge</p>
+
+        <form>
+
+            <!-- Question 1 -->
+            <div class="question">
+                <label for="q1">
+                    <span>1.</span> What HTML tag is used to create a hyperlink?
+                </label>
+                <input type="text" id="q1" name="q1" required>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <label for="q2">
+                    <span>2.</span> Briefly explain the purpose of CSS.
+                </label>
+                <textarea id="q2" name="q2" rows="4" required></textarea>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <label for="q3">
+                    <span>3.</span> Which property is used to change text color in CSS?
+                </label>
+                <select id="q3" name="q3" required>
+                    <option value="" selected disabled>Choose One ...</option>
+                    <option value="font-color">font-color</option>
+                    <option value="color">color</option>
+                    <option value="text-style">text-style</option>
+                </select>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <label for="q4">
+                    <span>4.</span> How many heading levels are available in HTML?
+                </label>
+                <input type="number" id="q4" name="q4" required>
+            </div>
+
+            <button type="submit">Submit Quiz</button>
+
+        </form>
+    </main>
+
+</body>
+
+</html>
